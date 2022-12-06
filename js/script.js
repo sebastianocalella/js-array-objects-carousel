@@ -29,17 +29,31 @@ const images = [
 //
 
 const domReference = document.querySelector('.carousel-image');
+
+
 const previousButton = document.querySelector('.previous');
 const nextButton = document.querySelector('.next');
 
 let imageIndex = 0;
+
+const thumbDom = document.querySelector('.carousel-thumbnails');
+
+for(let i=0; i<4;i++){
+    const thumbDiv = domElementCreator('div');
+    thumbDiv.classList.add('my_carousel-thumbnails-item');
+    thumbDom.appendChild(thumbDiv);
+    thumbDiv.innerHTML = `<img src="${images[i+1].image}" alt="image ${i +1}" </img>`;
+}
+
+const thumbElements = document.querySelectorAll('my_carousel-thumbnails-item');
+
 
 
 images.forEach((element,index) =>{
     const domElement = domElementCreator('div');
     domElement.classList.add(`image-${index}`,'my_carousel-item','position-relative');
     domReference.appendChild(domElement);
-    domElement.innerHTML = `<img src="${element.image}" alt="image ${index}">
+    domElement.innerHTML = `<img src="${element.image}" alt="image ${index +1}">
         <h2 class="image-${index}">${element.title}</h2> 
         <p class="image-${index}">${element.text}</p>`;
     if(imageIndex==index){

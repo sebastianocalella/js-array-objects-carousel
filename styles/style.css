@@ -20,10 +20,19 @@ div.carousel-image{
     background-color: blue;
 }
 
-/* div.carousel-thumbnails{
-    width: 21.5%;
+div.carousel-thumbnails{
+    width: 25%;
     background-color: violet;
-} */
+}
+
+div.my_carousel-thumbnails-item{
+    height: 25%;
+}
+
+div.my_carousel-thumbnails-item img{
+    width: 100%;
+    height: 100%;
+}
 
 .font-color-white{
     color:white;
@@ -137,6 +146,7 @@ div.my_carousel-item.image-4{
         0px -1px 0px black,
         0px 1px 0px black
 }
+
 
 
 
