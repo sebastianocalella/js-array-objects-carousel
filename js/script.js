@@ -37,7 +37,7 @@ let imageIndex = 0;
 
 images.forEach((element,index) =>{
     const domElement = domElementCreator('div');
-    domElement.classList.add(`image-${index}`,'my_carousel-item');
+    domElement.classList.add(`image-${index}`,'my_carousel-item','position-relative');
     domReference.appendChild(domElement);
     domElement.innerHTML = `<img src="${element.image}" alt="image ${index}">
         <h2>${element.title}</h2> 

@@ -40,6 +40,7 @@ div.previous{
     top: 2.5rem;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 1;
 }
 
 div.previous:hover{
@@ -50,6 +51,7 @@ div.next{
     bottom: 2.5rem;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 1;
 }
 
 div.next:hover{
@@ -71,3 +73,24 @@ div.my_carousel-item img{
     object-fit: cover;
     object-position: center;
 }
+
+div.my_carousel-item h2,
+div.my_carousel-item p {
+    position: absolute;
+    right: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+div.my_carousel-item h2{
+    font-size: 2.8rem;
+    bottom: 250px;
+}
+
+div.my_carousel-item p{
+    width: 80%;
+    font-size: 1.8rem;
+    bottom: 100px;
+    text-align: end;
+}
+
