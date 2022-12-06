@@ -29,13 +29,39 @@ const images = [
 //
 
 const domReference = document.querySelector('.carousel-image');
+const previousButton = document.querySelector('.previous');
+const nextButton = document.querySelector('.next');
+
+let imageIndex = 0;
+
 
 images.forEach((element,index) =>{
     const domElement = domElementCreator('div');
-    domElement.classList.add(`image-${index}`);
+    domElement.classList.add(`image-${index}`,'my_carousel-item');
     domReference.appendChild(domElement);
     domElement.innerHTML = `<img src="${element.image}" alt="image ${index}">`;
-})
+    if(imageIndex==index){
+        domElement.classList.add('active');
+    }
+});
+
+const allImages = document.querySelectorAll('.my_carousel-item');
+console.log(allImages);
+
+nextButton.addEventListener('click', function(){
+    imageIndex++;
+    allImages.forEach((element,index) => {
+        element.classList.remove('active');
+        if (imageIndex>4){
+            imageIndex = 0;
+        }
+        if(imageIndex==index){
+            element.classList.add('active');
+        }
+    });
+});
+
+
 
 function domElementCreator(tag){
     const element = document.createElement(`${tag}`);

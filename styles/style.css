@@ -42,15 +42,23 @@ div.previous{
     transform: translateX(-50%);
 }
 
+div.previous:hover{
+    cursor: pointer;
+}
+
 div.next{
     bottom: 2.5rem;
     left: 50%;
     transform: translateX(-50%);
 }
 
+div.next:hover{
+    cursor: pointer;
+}
+
 div.my_carousel-item {
-    height: 100%;
     display:none;
+    height: 100%;
 }
 
 div.my_carousel-item.active {
