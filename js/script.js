@@ -37,6 +37,7 @@ const nextButton = document.querySelector('.next');
 let imageIndex = 0;
 
 const thumbDom = document.querySelector('.carousel-thumbnails');
+const thumbElements = document.querySelectorAll('.my_carousel-thumbnails-item');
 
 for(let i=0; i<4;i++){
     const thumbDiv = domElementCreator('div');
@@ -45,8 +46,7 @@ for(let i=0; i<4;i++){
     thumbDiv.innerHTML = `<img src="${images[i+1].image}" alt="image ${i +1}" </img>`;
 }
 
-const thumbElements = document.querySelectorAll('my_carousel-thumbnails-item');
-
+console.log(thumbElements);
 
 
 images.forEach((element,index) =>{
@@ -62,7 +62,7 @@ images.forEach((element,index) =>{
 });
 
 const allImages = document.querySelectorAll('.my_carousel-item');
-console.log(allImages);
+
 
 previousButton.addEventListener('click', function(){
     imageIndex--;
@@ -89,6 +89,16 @@ nextButton.addEventListener('click', function(){
         }
     });
 });
+
+
+thumbElements.forEach((element,index)=>{
+    element.addEventListener('click',function(){
+        allImages.forEach((element,index) => {
+            element.classList.add('active');
+
+        });
+    })
+})
 
 
 
