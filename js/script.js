@@ -48,6 +48,19 @@ images.forEach((element,index) =>{
 const allImages = document.querySelectorAll('.my_carousel-item');
 console.log(allImages);
 
+previousButton.addEventListener('click', function(){
+    imageIndex--;
+    allImages.forEach((element,index) => {
+        element.classList.remove('active');
+        if (imageIndex<0){
+            imageIndex = 4;
+        }
+        if(imageIndex==index){
+            element.classList.add('active');
+        }
+    });
+});
+
 nextButton.addEventListener('click', function(){
     imageIndex++;
     allImages.forEach((element,index) => {
@@ -60,6 +73,8 @@ nextButton.addEventListener('click', function(){
         }
     });
 });
+
+
 
 
 
