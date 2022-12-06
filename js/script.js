@@ -39,7 +39,9 @@ images.forEach((element,index) =>{
     const domElement = domElementCreator('div');
     domElement.classList.add(`image-${index}`,'my_carousel-item');
     domReference.appendChild(domElement);
-    domElement.innerHTML = `<img src="${element.image}" alt="image ${index}">`;
+    domElement.innerHTML = `<img src="${element.image}" alt="image ${index}">
+        <h2>${element.title}</h2> 
+        <p>${element.text}</p>`;
     if(imageIndex==index){
         domElement.classList.add('active');
     }
