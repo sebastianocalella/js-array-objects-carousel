@@ -78,12 +78,11 @@ div.my_carousel-item h2,
 div.my_carousel-item p {
     position: absolute;
     right: 20px;
-    color: white;
     font-weight: bold;
 }
 
 div.my_carousel-item h2{
-    font-size: 2.8rem;
+    font-size: 3rem;
     bottom: 250px;
 }
 
@@ -93,4 +92,51 @@ div.my_carousel-item p{
     bottom: 100px;
     text-align: end;
 }
+
+div.my_carousel-item.image-0{
+    color: rgb(177, 212, 212);
+    text-shadow:
+        -1px 0px 0px black,
+        1px 0px 0px black,
+        0px -1px 0px black,
+        0px 1px 0px black
+}
+
+div.my_carousel-item.image-1{
+    color: #ff841f;
+    text-shadow:
+        -1px 0px 0px black,
+        1px 0px 0px black,
+        0px -1px 0px black,
+        0px 1px 0px black
+}
+
+div.my_carousel-item.image-2{
+    color: rgb(68, 79, 200);
+    text-shadow:
+        -1px 0px 0px black,
+        1px 0px 0px black,
+        0px -1px 0px black,
+        0px 1px 0px black
+}
+
+div.my_carousel-item.image-3{
+    color: rgb(203, 152, 100);
+    text-shadow:
+        -1px 0px 0px black,
+        1px 0px 0px black,
+        0px -1px 0px black,
+        0px 1px 0px black
+}
+
+div.my_carousel-item.image-4{
+    color: rgb(233, 186, 0);
+    text-shadow:
+        -1px 0px 0px black,
+        1px 0px 0px black,
+        0px -1px 0px black,
+        0px 1px 0px black
+}
+
+
 

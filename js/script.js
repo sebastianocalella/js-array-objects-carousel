@@ -40,8 +40,8 @@ images.forEach((element,index) =>{
     domElement.classList.add(`image-${index}`,'my_carousel-item','position-relative');
     domReference.appendChild(domElement);
     domElement.innerHTML = `<img src="${element.image}" alt="image ${index}">
-        <h2>${element.title}</h2> 
-        <p>${element.text}</p>`;
+        <h2 class="image-${index}">${element.title}</h2> 
+        <p class="image-${index}">${element.text}</p>`;
     if(imageIndex==index){
         domElement.classList.add('active');
     }
@@ -55,7 +55,7 @@ previousButton.addEventListener('click', function(){
     allImages.forEach((element,index) => {
         element.classList.remove('active');
         if (imageIndex<0){
-            imageIndex = 4;
+            imageIndex = images.length -1;
         }
         if(imageIndex==index){
             element.classList.add('active');
@@ -67,7 +67,7 @@ nextButton.addEventListener('click', function(){
     imageIndex++;
     allImages.forEach((element,index) => {
         element.classList.remove('active');
-        if (imageIndex>4){
+        if (imageIndex>images.length-1){
             imageIndex = 0;
         }
         if(imageIndex==index){
