@@ -33,8 +33,8 @@ const domReference = document.querySelector('.carousel-image');
 images.forEach((element,index) =>{
     const domElement = domElementCreator('div');
     domElement.classList.add(`image-${index}`);
-    console.log(domElement);
     domReference.appendChild(domElement);
+    domElement.innerHTML = `<img src="${element.image}" alt="image ${index}">`;
 })
 
 function domElementCreator(tag){
